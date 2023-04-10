@@ -1,0 +1,221 @@
+:root {
+    --main-white: rgb(240, 240, 240);
+    --main-blue: rgb(19, 40, 86);
+    --second-blue:  rgb(0, 11, 37);
+    --main-red: rgb(151, 21, 21);
+    --second-red: rgb(238, 62, 62);
+    --main-black: rgb(0, 0, 0);
+    --second-black: rgb(10, 10, 10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /*18px*/
+    width: 100%;
+    background-color: var(--main-black);
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2 {
+    color: var(--main-white);
+}
+
+/*Nav bar*/
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7%;
+    background-color: var(--main-red);
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 30px;
+}
+
+.nav-list a {
+    display: block;
+    padding: 20px;
+    font-size: 1.4rem;
+}
+
+.nav-list a:hover {
+    background-color: var(--main-blue);
+    height: 100%;
+}
+
+/*'Welcome' section*/
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-black);
+    background: linear-gradient(
+        55deg,
+        var(--main-black) 0%,
+        var(--second-black) 100%
+    );
+}
+
+p {
+    color: var(--second-red);
+    font-style: italic;
+    margin-top: 8px;
+}
+
+.description {
+    height: 100px;
+    padding: 30px;
+    color: var(--main-white);
+    font-style: normal;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+/*'Project' section*/
+.project-section {
+    background-color: var(--main-blue);
+    height: 100vh;
+}
+
+.projects-section-header {
+    max-width: 710px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 100px;
+    border-bottom: 2px solid var(--second-black);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    width: 100%;
+    height: 450px;
+    padding: 70px 70px 70px 70px;
+}
+
+.project-tile {
+    color: var(--main-white);
+    background-color: var(--main-black);
+    width: 100%;
+    height: 60px;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1px;
+    font-style: normal;
+}
+
+.code {
+    margin: 0 7px 0 7px;
+}
+
+.project:hover .code {
+    color: rgb(255, 128, 59);
+    transition: color 0.3s ease-out;
+}
+
+/*'Contact' section*/
+.contact-section {
+    background-color: rgb(0, 11, 37);
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-section-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: -50px;
+}
+
+.contact-section-header p {
+    color: var(--main-white);
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.contact-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.contact-links a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-links .button-contact {
+    margin: 30px;
+    transition: 0.4s ease-out;
+}
+
+.contact-links .button-contact .fa-brands {
+    margin: 0 7px 0 7px;
+}
+
+.button-contact:hover {
+    transform: translateY(8px); 
+}
+
+/*'Footer' section*/
+footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--main-black);
+    border-top: 2px solid var(--main-red);
+}
+
+footer p {
+    padding: 25px;
+    margin-right: 20px;
+    color: var(--main-white);
+    font-size: 20px;
+    font-style: normal;
+}
+
+footer .personal-link:hover {
+    color: var(--second-red);
+}
+
+footer .personal-link:visited {
+    color: rgb(165, 4, 165);
+}
